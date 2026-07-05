@@ -1,0 +1,17 @@
+fun isLeap(year: Int): Boolean {
+    return if (year % 400 == 0) {
+        true
+    } else if (year % 100 == 0) {
+        false
+    } else {
+        year % 4 == 0
+    }
+}
+
+fun main() {
+    val year = readLine()!!.toInt()
+    if (isLeap(year))
+        println("True")
+    else
+        println("False")
+}
